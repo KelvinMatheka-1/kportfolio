@@ -57,7 +57,7 @@ const GetInTouch = () => {
         stuff, anything is cool. So feel free to message me on any of my social
         media or shoot me an{' '}
         <Link
-          href="mailto:marcjhon18@gmail.com"
+          href="mailto:kelvinmatheka321@gmail.com"
           target="_blank"
           rel="noreferrer"
         >

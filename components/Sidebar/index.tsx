@@ -61,7 +61,7 @@ const Sidebar = () => {
             variant="accent"
             fontWeight="light"
           >
-            Ohh you found me?. Howdy! I am
+            Ohh you found me?. Hello! I am
           </MotionText>
           <MotionHeading
             as="h1"
@@ -70,7 +70,7 @@ const Sidebar = () => {
             textTransform="uppercase"
             variants={fadeInUp}
           >
-            Marc Jhon
+            Kelvin Matheka
           </MotionHeading>
           <MotionHeading
             as="h2"
@@ -82,7 +82,7 @@ const Sidebar = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            Lawingco.
+            
           </MotionHeading>
           <MotionText
             colorScheme="gray"
@@ -90,7 +90,7 @@ const Sidebar = () => {
             className={styles.marginTopForce}
             variants={fadeInUp}
           >
-            Or you could call me KL. That works too . . .
+            Or you could call me MK. That works too . . .
           </MotionText>
 
           <MotionHeading
@@ -110,13 +110,13 @@ const Sidebar = () => {
             variants={fadeInUp}
             maxWidth={{ base: '100%', lg: '80%' }}
           >
-            Hey! How nice of you to look at my personal site,
+            Hey! Nice of you to look at my personal site,
             <Text variant="emphasis" as="span">
               {' '}
               Thank you!
             </Text>
             <br />I am software engineer that specializes at backend apis, front
-            end integration, recently found myself studying UX too.
+            end integration, recently found myself studying android development.
           </MotionText>
           <MotionButton
             size="lg"
@@ -128,7 +128,7 @@ const Sidebar = () => {
             width="120px"
             variants={simpleOpacity}
             as={'a'}
-            href="mailto:marcjhon18@gmail.com"
+            href="mailto:kelvinmatheka321@gmail.com"
             target="_blank"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
