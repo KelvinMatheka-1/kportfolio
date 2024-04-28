@@ -47,7 +47,7 @@ export const Experiences: {
   Deloitte: {
     name: 'CtrlSend',
     longName: 'Scentregroup Limited AU',
-    subDetail: 'A money transfer startup company',
+    subDetail: 'a money transfer startup company',
     url: 'https://ctrlsend.framer.website/',
     position: 'Founder, Developer',
     duration: '2023 - present',
@@ -68,33 +68,28 @@ export const Experiences: {
     ],
   },
   Blotocol: {
-    name: 'Blotocol',
+    name: 'upwork',
     longName: 'Blotocol Philippines',
-    subDetail: 'formerly IVP Global Inc.',
-    url: 'https://blotocol.com/',
-    position: 'Senior Software Engineer',
-    duration: 'Nov 2016 - Feb 2020',
+    subDetail: 'freelancing platform. Formerly Elance-oDesk',
+    url: '',
+    position: 'Freelance web developer',
+    duration: 'Nov 2020 - Feb 2020',
     logo: {
       light: '/worked_at_logos/ivp/blotocol_logo-dark.png',
       dark: '/worked_at_logos/ivp/blotocol-logo-white.png',
     },
     roles: [
       <>
-        Developed a Twitter Raffle Campaign / Contest Bot called Camps with
-        statistics similar to Facebook Ads.
+        Functioned as a proficient WordPress Developer with expertise in theme customization, plugin development, and site optimization. 
       </>,
       <>
-        In 2019 got promoted as Senior Software Engineer and worked with Cryto
-        Exchange, Smart Contracts and other APIs using several techs such as
-        NodeJS, .NET Core and React.
+        Served as a dynamic Software Engineer with a passion for developing robust and scalable software solutions.
       </>,
       <>
-        Create highly scalable Japanese e-commerce sites. Most notable clients
-        were TV Tokyo, Layla EC using .NET.
+         Held the role of a detail-oriented Database Developer/Administrator experienced in designing and optimizing database systems. Skilled in SQL, NoSQL, and database administration.
       </>,
       <>
-        Hired at 2016, Undergone Japanese language training first. Shortly
-        after, worked with in-house .NET MVC Framework called ERS.
+         Utilized skills in HTML/CSS, JavaScript, React, and Node.js to deliver custom web solutions for diverse clients,
       </>,
     ],
   },
