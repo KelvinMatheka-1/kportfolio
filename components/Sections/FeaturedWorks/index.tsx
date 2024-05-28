@@ -44,12 +44,11 @@ const FeaturedWorksSection = () => {
         <MotionGridItem colSpan={6} variants={fadeInUpSlower}>
           <FeaturedCard
             idx={1}
-            title="Tobira!"
-            src="/works/tobira/IphoneX-tobira.webp"
-            description="Japanese social media platform for travelers to show off their
-          adventure to the world. I was incharge of Front end integration, made using React, Antd and Styled Components."
+            title="CtrlSend!"
+            src="/works/tobira/ctrlsend.png"
+            description="A simple early website explaining and demonstrating how ctrlsend works, you can check the new website made using framer, https://ctrlsend.framer.website/"
             height={{ base: '130px', md: '225px', '2xl': '300px' }}
-            ctaUrl="https://tobira-app-test.netlify.app/"
+            ctaUrl="https://ctrlsend.vercel.app/"
             objectPosition="right 20%"
             isMobile={isMobile}
           />
@@ -58,11 +57,11 @@ const FeaturedWorksSection = () => {
         <MotionGridItem colSpan={6} variants={fadeInUpSlower}>
           <FeaturedCard
             idx={2}
-            title="RSV"
-            description="RSV is a smart contract (ERC20) powered reservation system. I am incharge of backend using NET.Core 2.1."
-            src="/works/rsv.webp"
+            title="python selenium script"
+            description=" Selenium automation script for testing the AutomationExercise website. The script performs various actions including signing in, fetching items, sorting them, adding items to the cart, and placing an order on the website."
+            src="/works/Selenium-python.jpg"
             height={{ base: '130px', md: '225px', '2xl': '300px' }}
-            ctaUrl="https://solution.rsv.ltd/jp"
+            ctaUrl="https://github.com/KelvinMatheka-1/selenium-automation-script"
             isMobile={isMobile}
           />
         </MotionGridItem>
@@ -70,27 +69,27 @@ const FeaturedWorksSection = () => {
         <MotionGridItem colSpan={6} variants={fadeInUpSlower}>
           <FeaturedCard
             idx={3}
-            title="Agora School"
+            title="Splendid Events"
             description="A quizz - reviewer LMS, I made as a freelancer. Backend were powered by PHPSlim and VueJS for Front end."
-            src="/works/agora.webp"
+            src="/works/splendid.png"
             height={{ base: '130px', md: '225px', '2xl': '300px' }}
-            ctaUrl="https://dev.agora-school.com"
+            ctaUrl="https://spe-frontend.vercel.app/"
             objectPosition="right 20%"
             isMobile={isMobile}
           />
         </MotionGridItem>
 
-        <MotionGridItem colSpan={6} variants={fadeInUpSlower}>
+        {/* <MotionGridItem colSpan={6} variants={fadeInUpSlower}>
           <FeaturedCard
             idx={4}
-            title="TMH Layla EC"
-            description="A Japanese Semi-conductor e-commerce made at my old place at IVP. I was working with backend using ASP.NET MVC"
+            title="What happened!"
+            description="the go-to blog for all things tech! Stay updated with the latest developments, insightful analyses, and in-depth reviews from the world of technology. "
             src="/works/tmh.webp"
             height={{ base: '130px', md: '225px', '2xl': '300px' }}
-            ctaUrl="https://www.layla-ec.com/"
+            ctaUrl="https://what-happened-six.vercel.app/"
             isMobile={isMobile}
           />
-        </MotionGridItem>
+        </MotionGridItem> */}
       </MotionGrid>
     </Stack>
   )
