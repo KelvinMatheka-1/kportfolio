@@ -54,17 +54,7 @@ const FeaturedWorksSection = () => {
           />
         </MotionGridItem>
 
-        <MotionGridItem colSpan={6} variants={fadeInUpSlower}>
-          <FeaturedCard
-            idx={2}
-            title="python selenium script"
-            description=" Selenium automation script for testing the AutomationExercise website. The script performs various actions including signing in, fetching items, sorting them, adding items to the cart, and placing an order on the website."
-            src="/works/Selenium-python.jpg"
-            height={{ base: '130px', md: '225px', '2xl': '300px' }}
-            ctaUrl="https://github.com/KelvinMatheka-1/selenium-automation-script"
-            isMobile={isMobile}
-          />
-        </MotionGridItem>
+
 
         <MotionGridItem colSpan={6} variants={fadeInUpSlower}>
           <FeaturedCard
