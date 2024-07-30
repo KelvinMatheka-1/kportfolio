@@ -69,7 +69,7 @@ const FeaturedWorksSection = () => {
           />
         </MotionGridItem>
 
-        {/* <MotionGridItem colSpan={6} variants={fadeInUpSlower}>
+        <MotionGridItem colSpan={6} variants={fadeInUpSlower}>
           <FeaturedCard
             idx={4}
             title="What happened!"
@@ -79,7 +79,7 @@ const FeaturedWorksSection = () => {
             ctaUrl="https://what-happened-six.vercel.app/"
             isMobile={isMobile}
           />
-        </MotionGridItem> */}
+        </MotionGridItem>
       </MotionGrid>
     </Stack>
   )
