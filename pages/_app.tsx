@@ -4,12 +4,14 @@ import { ChakraProvider } from '@chakra-ui/react'
 import { AnimatePresence } from 'framer-motion'
 import theme from 'config/theme'
 import FavIconProvider from 'components/Misc/FavIconProvider'
+import AnimatedBackground from 'components/Misc/AnimatedBackground'
 
 function KLSite({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <AnimatePresence exitBeforeEnter>
       <ChakraProvider theme={theme}>
         <FavIconProvider>
+          <AnimatedBackground />
           <Component {...pageProps} />
         </FavIconProvider>
       </ChakraProvider>
