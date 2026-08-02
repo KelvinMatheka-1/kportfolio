@@ -20,7 +20,7 @@ import {
   SiNextdotjs,
   SiNodedotjs,
   SiDocker,
-  SiRuby,
+  SiPlaywright,
 } from 'react-icons/si'
 import { GiCoffeePot } from 'react-icons/gi'
 import { IoMdOpen } from 'react-icons/io'
@@ -94,8 +94,8 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
             Node
           </ListItem>
           <ListItem fontSize="small" display="flex" alignItems="center">
-            <ListIcon as={SiRuby} color={emphasis} fontSize="2em" />
-            Ruby
+            <ListIcon as={SiPlaywright} color={emphasis} fontSize="2em" />
+            Playwright
           </ListItem>
         </List>
         <List spacing={3}>

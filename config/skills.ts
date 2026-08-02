@@ -34,6 +34,7 @@ import {
   SiUnity,
   SiMicrosoft,
   SiElectron,
+  SiPlaywright,
 } from 'react-icons/si'
 import { BsQuestionSquare } from 'react-icons/bs'
 import { AiOutlineAntDesign } from 'react-icons/ai'
@@ -101,6 +102,10 @@ export const Skills: {
     {
       name: 'Redux',
       icon: SiRedux,
+    },
+    {
+      name: 'Playwright',
+      icon: SiPlaywright,
     },
   ],
   database: [
