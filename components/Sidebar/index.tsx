@@ -20,6 +20,7 @@ import {
   scaleUp,
 } from 'config/animations'
 import { SocialMedias } from 'config/sidebar'
+import Typewriter from 'components/Misc/Typewriter'
 const Sidebar = () => {
   const { colorMode } = useColorMode()
   const display = useBreakpointValue({ base: 'none', lg: 'block' })
@@ -97,8 +98,16 @@ const Sidebar = () => {
             variant="emphasis"
             className={styles.marginTopSmall}
             variants={fadeInUp}
+            minH="32px"
           >
-            Software Engineer
+            <Typewriter
+              words={[
+                'Software Engineer',
+                'API & Backend Architect',
+                'Automation & Playwright Expert',
+                'Frontend Integrator',
+              ]}
+            />
           </MotionHeading>
 
           <MotionText
