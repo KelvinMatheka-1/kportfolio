@@ -81,9 +81,7 @@ const Sidebar = () => {
             variants={letterSpace}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-          >
-            
-          </MotionHeading>
+          ></MotionHeading>
           <MotionText
             colorScheme="gray"
             fontSize="smaller"

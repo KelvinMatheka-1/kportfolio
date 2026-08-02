@@ -32,17 +32,19 @@ export const Experiences: {
     },
     roles: [
       <>
-        Contributed to the development and maintenance of Tutadoo's backend infrastructure: This involved working
-        with databases, APIs, servers, and other tools to ensure smooth operation and scalability.
+        Contributed to the development and maintenance of Tutadoo's backend
+        infrastructure: This involved working with databases, APIs, servers, and
+        other tools to ensure smooth operation and scalability.
       </>,
       <>
-      Wrote and tested code: I built new features, fixed bugs, and optimized existing functionalities.
+        Wrote and tested code: I built new features, fixed bugs, and optimized
+        existing functionalities.
       </>,
       <>
-      I maintained clear and concise documentation to ensure understanding and maintainability of the codebase.
+        I maintained clear and concise documentation to ensure understanding and
+        maintainability of the codebase.
       </>,
     ],
-    
   },
   Deloitte: {
     name: 'CtrlSend',
@@ -57,13 +59,18 @@ export const Experiences: {
     },
     roles: [
       <>
-      I conceived the idea, built the initial prototype, and established the vision and mission of the company. 
+        I conceived the idea, built the initial prototype, and established the
+        vision and mission of the company.
       </>,
       <>
-      I coded the backend infrastructure, implemented key features, and ensured the functionality and performance of the application. 
+        I coded the backend infrastructure, implemented key features, and
+        ensured the functionality and performance of the application.
       </>,
       <>
-      Leveraging my expertise in both business development and technical implementation, I effectively communicate CtrlSend's value proposition and demonstrate its functionality to potential stakeholders and investors.
+        Leveraging my expertise in both business development and technical
+        implementation, I effectively communicate CtrlSend's value proposition
+        and demonstrate its functionality to potential stakeholders and
+        investors.
       </>,
     ],
   },
@@ -80,16 +87,21 @@ export const Experiences: {
     },
     roles: [
       <>
-        Functioned as a proficient WordPress Developer with expertise in theme customization, plugin development, and site optimization. 
+        Functioned as a proficient WordPress Developer with expertise in theme
+        customization, plugin development, and site optimization.
       </>,
       <>
-        Served as a dynamic Software Engineer with a passion for developing robust and scalable software solutions.
+        Served as a dynamic Software Engineer with a passion for developing
+        robust and scalable software solutions.
       </>,
       <>
-         Held the role of a detail-oriented Database Developer/Administrator experienced in designing and optimizing database systems. Skilled in SQL, NoSQL, and database administration.
+        Held the role of a detail-oriented Database Developer/Administrator
+        experienced in designing and optimizing database systems. Skilled in
+        SQL, NoSQL, and database administration.
       </>,
       <>
-         Utilized skills in HTML/CSS, JavaScript, React, and Node.js to deliver custom web solutions for diverse clients,
+        Utilized skills in HTML/CSS, JavaScript, React, and Node.js to deliver
+        custom web solutions for diverse clients,
       </>,
     ],
   },

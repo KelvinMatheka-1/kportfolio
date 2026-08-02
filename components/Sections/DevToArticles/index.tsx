@@ -32,7 +32,8 @@ const DevToArticles = ({ articles }: { articles: Article[] }) => {
         My current read on tech blogs
       </Heading>
       <Text variant="description">
-        I read dev related things and share them on my portfolio from time to time!
+        I read dev related things and share them on my portfolio from time to
+        time!
       </Text>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={{ base: 5, md: 10 }}>
         {articles.map((item) => (

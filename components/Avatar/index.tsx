@@ -59,12 +59,7 @@ const Avatar = () => {
         />
         <Text textAlign="center" fontSize="smaller" variant="description">
           Stay{' '}
-          <Link
-            href=""
-            target=""
-            aria-label="KojiroArt"
-            rel="noreferrer"
-          >
+          <Link href="" target="" aria-label="KojiroArt" rel="noreferrer">
             Smiling
           </Link>
         </Text>

@@ -20,7 +20,6 @@ export const SocialMedias: SocialMedia[] = [
     label: 'Mail',
     href: 'mailto:kelvinmatheka321@gmail.com',
     icon: FaMailBulk,
-
   },
   // {
   //   label: 'Instagram',

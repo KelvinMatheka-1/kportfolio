@@ -1,5 +1,5 @@
 import { memo } from 'react'
-import { Heading, Text, Stack, Link } from '@chakra-ui/react'
+import { Heading, Text, Stack } from '@chakra-ui/react'
 import ExperienceTab from './ExperienceTab'
 const DetailSection = () => (
   <Stack
@@ -19,7 +19,7 @@ const DetailSection = () => (
       Since 2021, had a privilege to work with several companies that enabled me
       to hone my skills and talents. These companies will always have a special
       place in my heart
-       {/* Currently I am working with{' '}
+      {/* Currently I am working with{' '}
       <Link href="https://www.tutadoo.com/" target="_blank" rel="noreferrer">
         Tutadoo
       </Link> */}
