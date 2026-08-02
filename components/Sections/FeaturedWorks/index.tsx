@@ -44,12 +44,12 @@ const FeaturedWorksSection = () => {
         <MotionGridItem colSpan={6} variants={fadeInUpSlower}>
           <FeaturedCard
             idx={1}
-            title="CtrlSend!"
-            src="/works/tobira/ctrlsend.png"
-            description="A simple early website explaining and demonstrating how ctrlsend works, you can check the new website made using framer, https://ctrlsend.framer.website/"
+            title="CtrlSend"
+            src="/works/ctrlsend.png"
+            description="CtrlSend is a mobile money service designed to give users complete control over sent funds, stopping fraud, misuse, and accidental transfers by aligning usage with intent."
             height={{ base: '130px', md: '225px', '2xl': '300px' }}
-            ctaUrl="https://ctrlsend.vercel.app/"
-            objectPosition="right 20%"
+            ctaUrl="https://ctrlsend.framer.website/"
+            objectPosition="center"
             isMobile={isMobile}
           />
         </MotionGridItem>
@@ -69,12 +69,12 @@ const FeaturedWorksSection = () => {
         <MotionGridItem colSpan={6} variants={fadeInUpSlower}>
           <FeaturedCard
             idx={3}
-            title="Splendid Events"
-            description="A quizz - reviewer LMS, I made as a freelancer. Backend were powered by PHPSlim and VueJS for Front end."
-            src="/works/splendid.png"
+            title="Aura Coffee Web Page"
+            description="Aura Coffee web page featuring Playwright scripts for automated end-to-end testing."
+            src="/works/aura.png"
             height={{ base: '130px', md: '225px', '2xl': '300px' }}
-            ctaUrl="https://spe-frontend.vercel.app/"
-            objectPosition="right 20%"
+            ctaUrl="https://aura-ruby-eight.vercel.app/"
+            objectPosition="center"
             isMobile={isMobile}
           />
         </MotionGridItem>
