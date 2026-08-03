@@ -28,8 +28,8 @@ const letterVariants = {
     opacity: 0,
     filter: 'blur(12px)',
     scale: 0.15,
-    y: (i % 2 === 0 ? 14 : -14),
-    x: (i % 3 === 0 ? -8 : i % 3 === 1 ? 8 : 0),
+    y: i % 2 === 0 ? 14 : -14,
+    x: i % 3 === 0 ? -8 : i % 3 === 1 ? 8 : 0,
   }),
   visible: {
     opacity: 1,
@@ -47,8 +47,8 @@ const letterVariants = {
     opacity: 0,
     filter: 'blur(10px)',
     scale: 0.1,
-    y: (i % 2 === 0 ? -16 : -24),
-    x: (i % 3 === 0 ? 10 : -10),
+    y: i % 2 === 0 ? -16 : -24,
+    x: i % 3 === 0 ? 10 : -10,
     transition: {
       duration: 0.45,
       ease: 'easeOut',
@@ -68,7 +68,9 @@ const Typewriter = ({
   const [index, setIndex] = useState(0)
 
   useEffect(() => {
-    if (!words || words.length <= 1) return undefined
+    if (!words || words.length <= 1) {
+      return undefined
+    }
 
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % words.length)
@@ -140,8 +142,3 @@ const Typewriter = ({
 }
 
 export default memo(Typewriter)
-
-
-
-
-

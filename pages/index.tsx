@@ -156,7 +156,8 @@ const FALLBACK_ARTICLES: Article[] = [
   {
     id: 'fb-1',
     title: 'Building Scalable Web Applications with Next.js & React',
-    description: 'A deep dive into server components, rendering strategies, and optimized client state management.',
+    description:
+      'A deep dive into server components, rendering strategies, and optimized client state management.',
     readable_publish_date: 'Aug 1',
     url: 'https://dev.to/t/webdev',
     tag_list: ['webdev', 'react', 'nextjs'],
@@ -166,7 +167,8 @@ const FALLBACK_ARTICLES: Article[] = [
   {
     id: 'fb-2',
     title: 'Mastering TypeScript: Advanced Type Patterns & Generics',
-    description: 'Learn how to leverage conditional types, template literal types, and type guards to build rock-solid codebases.',
+    description:
+      'Learn how to leverage conditional types, template literal types, and type guards to build rock-solid codebases.',
     readable_publish_date: 'Jul 29',
     url: 'https://dev.to/t/typescript',
     tag_list: ['typescript', 'javascript', 'coding'],
@@ -176,7 +178,8 @@ const FALLBACK_ARTICLES: Article[] = [
   {
     id: 'fb-3',
     title: 'Designing High-Performance CSS Animations & Layouts',
-    description: 'Explore hardware-accelerated transforms, container queries, and subgrid for fluid modern responsive design.',
+    description:
+      'Explore hardware-accelerated transforms, container queries, and subgrid for fluid modern responsive design.',
     readable_publish_date: 'Jul 26',
     url: 'https://dev.to/t/css',
     tag_list: ['css', 'frontend', 'design'],
@@ -186,7 +189,8 @@ const FALLBACK_ARTICLES: Article[] = [
   {
     id: 'fb-4',
     title: 'The Evolution of Modern Software Engineering & AI',
-    description: 'How modern developer tooling, automated workflows, and AI assistants are shaping the future of web development.',
+    description:
+      'How modern developer tooling, automated workflows, and AI assistants are shaping the future of web development.',
     readable_publish_date: 'Jul 24',
     url: 'https://dev.to/t/ai',
     tag_list: ['ai', 'webdev', 'future'],
@@ -201,10 +205,19 @@ export async function getStaticProps() {
 
   let articles: Article[] = []
   try {
-    const techTags = ['webdev', 'javascript', 'react', 'typescript', 'ai', 'programming']
+    const techTags = [
+      'webdev',
+      'javascript',
+      'react',
+      'typescript',
+      'ai',
+      'programming',
+    ]
     const activeTag = techTags[periodIndex % techTags.length]
 
-    const res = await fetch(`https://dev.to/api/articles?tag=${activeTag}&per_page=20`)
+    const res = await fetch(
+      `https://dev.to/api/articles?tag=${activeTag}&per_page=20`
+    )
     if (res.ok) {
       const data = await res.json()
       if (Array.isArray(data) && data.length > 0) {
@@ -231,4 +244,3 @@ export async function getStaticProps() {
 }
 
 export default Portfolio
-

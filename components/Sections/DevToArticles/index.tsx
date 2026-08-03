@@ -6,7 +6,6 @@ import {
   Stack,
   SimpleGrid,
   Divider,
-  Box,
   Badge,
   Button,
   HStack,
@@ -15,6 +14,16 @@ import {
 } from '@chakra-ui/react'
 import { FaSyncAlt, FaClock, FaHeart, FaExternalLinkAlt } from 'react-icons/fa'
 import { Article } from 'types/article'
+
+const formatTags = (tagList: string[]) => {
+  if (!Array.isArray(tagList)) {
+    return ''
+  }
+  return tagList
+    .slice(0, 3)
+    .map((t) => `#${t}`)
+    .join(' ')
+}
 
 const DevToArticles = ({ articles }: { articles: Article[] }) => {
   const [displayArticles, setDisplayArticles] = useState<Article[]>(articles)
@@ -55,7 +64,9 @@ const DevToArticles = ({ articles }: { articles: Article[] }) => {
     try {
       const tags = ['webdev', 'javascript', 'react', 'typescript', 'ai', 'css']
       const randomTag = tags[Math.floor(Math.random() * tags.length)]
-      const res = await fetch(`https://dev.to/api/articles?tag=${randomTag}&per_page=12`)
+      const res = await fetch(
+        `https://dev.to/api/articles?tag=${randomTag}&per_page=12`
+      )
       if (res.ok) {
         const data = await res.json()
         if (Array.isArray(data) && data.length >= 4) {
@@ -89,7 +100,12 @@ const DevToArticles = ({ articles }: { articles: Article[] }) => {
           <Button
             size="xs"
             variant="outline"
-            leftIcon={<Icon as={FaSyncAlt} className={isRefreshing ? 'spin-icon' : ''} />}
+            leftIcon={
+              <Icon
+                as={FaSyncAlt}
+                className={isRefreshing ? 'spin-icon' : ''}
+              />
+            }
             onClick={handleShuffle}
             isLoading={isRefreshing}
             colorScheme="teal"
@@ -113,12 +129,14 @@ const DevToArticles = ({ articles }: { articles: Article[] }) => {
             alignItems="center"
             gap={1.5}
           >
-            <Icon as={FaClock} /> Updates every 3 days • Next refresh in {rotationText}
+            <Icon as={FaClock} /> Updates every 3 days • Next refresh in{' '}
+            {rotationText}
           </Badge>
         </HStack>
 
         <Text variant="description">
-          Curated tech reads & developer insights automatically refreshed every 3 days!
+          Curated tech reads & developer insights automatically refreshed every
+          3 days!
         </Text>
       </Stack>
 
@@ -176,28 +194,42 @@ const DevToArticles = ({ articles }: { articles: Article[] }) => {
                   paddingX={1}
                   variant="accentAlternative"
                 >
-                  {Array.isArray(item.tag_list)
-                    ? item.tag_list.slice(0, 3).map(t => `#${t}`).join(' ')
-                    : ''}
+                  {formatTags(item.tag_list)}
                 </Heading>
                 <HStack spacing={4} fontSize="smaller" px={1} color="gray.500">
                   <Text variant="description" fontSize="smaller">
                     {item.readable_publish_date}
                   </Text>
                   {item.reading_time_minutes && (
-                    <Text fontSize="smaller" display="flex" alignItems="center" gap={1}>
+                    <Text
+                      fontSize="smaller"
+                      display="flex"
+                      alignItems="center"
+                      gap={1}
+                    >
                       ⏱️ {item.reading_time_minutes} min read
                     </Text>
                   )}
                   {item.public_reactions_count ? (
-                    <Text fontSize="smaller" display="flex" alignItems="center" gap={1}>
-                      <Icon as={FaHeart} color="red.400" fontSize="10px" /> {item.public_reactions_count}
+                    <Text
+                      fontSize="smaller"
+                      display="flex"
+                      alignItems="center"
+                      gap={1}
+                    >
+                      <Icon as={FaHeart} color="red.400" fontSize="10px" />{' '}
+                      {item.public_reactions_count}
                     </Text>
                   ) : null}
                 </HStack>
               </Stack>
 
-              <Text fontSize="smaller" variant="description" paddingX={1} noOfLines={3}>
+              <Text
+                fontSize="smaller"
+                variant="description"
+                paddingX={1}
+                noOfLines={3}
+              >
                 {item.description}
               </Text>
             </Stack>
@@ -209,4 +241,3 @@ const DevToArticles = ({ articles }: { articles: Article[] }) => {
 }
 
 export default memo(DevToArticles)
-
