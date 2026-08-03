@@ -1,11 +1,59 @@
 import { useState, useEffect, memo } from 'react'
-import { Text, Box } from '@chakra-ui/react'
+import { Box, Text } from '@chakra-ui/react'
+import { motion, AnimatePresence } from 'framer-motion'
 
 interface TypewriterProps {
-  words: string[]
-  typingSpeed?: number
-  deletingSpeed?: number
-  pauseDuration?: number
+  words?: string[]
+  displayDuration?: number
+}
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.035,
+      delayChildren: 0.25,
+    },
+  },
+  exit: {
+    transition: {
+      staggerChildren: 0.025,
+      staggerDirection: -1,
+    },
+  },
+}
+
+const letterVariants = {
+  hidden: (i: number) => ({
+    opacity: 0,
+    filter: 'blur(12px)',
+    scale: 0.15,
+    y: (i % 2 === 0 ? 14 : -14),
+    x: (i % 3 === 0 ? -8 : i % 3 === 1 ? 8 : 0),
+  }),
+  visible: {
+    opacity: 1,
+    filter: 'blur(0px)',
+    scale: 1,
+    y: 0,
+    x: 0,
+    transition: {
+      type: 'spring',
+      damping: 16,
+      stiffness: 150,
+    },
+  },
+  exit: (i: number) => ({
+    opacity: 0,
+    filter: 'blur(10px)',
+    scale: 0.1,
+    y: (i % 2 === 0 ? -16 : -24),
+    x: (i % 3 === 0 ? 10 : -10),
+    transition: {
+      duration: 0.45,
+      ease: 'easeOut',
+    },
+  }),
 }
 
 const Typewriter = ({
@@ -15,72 +63,76 @@ const Typewriter = ({
     'Automation & Playwright Expert',
     'Frontend Integrator',
   ],
-  typingSpeed = 90,
-  deletingSpeed = 40,
-  pauseDuration = 1800,
+  displayDuration = 4800,
 }: TypewriterProps) => {
   const [index, setIndex] = useState(0)
-  const [subIndex, setSubIndex] = useState(0)
-  const [isDeleting, setIsDeleting] = useState(false)
 
   useEffect(() => {
-    if (words.length === 0) {
-      return undefined
-    }
+    if (!words || words.length <= 1) return undefined
 
-    const currentWord = words[index]
-
-    let timeout: NodeJS.Timeout
-
-    if (!isDeleting && subIndex === currentWord.length) {
-      timeout = setTimeout(() => {
-        setIsDeleting(true)
-      }, pauseDuration)
-    } else if (isDeleting && subIndex === 0) {
-      setIsDeleting(false)
+    const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % words.length)
-    } else {
-      timeout = setTimeout(
-        () => {
-          setSubIndex((prev) => prev + (isDeleting ? -1 : 1))
-        },
-        isDeleting ? deletingSpeed : typingSpeed
-      )
-    }
+    }, displayDuration)
 
-    return () => {
-      if (timeout) {
-        clearTimeout(timeout)
-      }
-    }
-  }, [
-    subIndex,
-    index,
-    isDeleting,
-    words,
-    typingSpeed,
-    deletingSpeed,
-    pauseDuration,
-  ])
+    return () => clearInterval(timer)
+  }, [words, displayDuration])
 
-  const currentText = words[index] ? words[index].substring(0, subIndex) : ''
+  const currentWord = words[index] || ''
+  const characters = Array.from(currentWord)
 
   return (
-    <Box as="span" display="inline-flex" alignItems="center">
-      <Text as="span">{currentText}</Text>
+    <Box
+      as="span"
+      display="inline-flex"
+      alignItems="center"
+      position="relative"
+      verticalAlign="middle"
+      py={0.5}
+    >
+      <AnimatePresence exitBeforeEnter>
+        <motion.span
+          key={index}
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+          style={{
+            display: 'inline-flex',
+            position: 'relative',
+            whiteSpace: 'pre',
+          }}
+        >
+          {characters.map((char, i) => (
+            <motion.span
+              key={`${char}-${i}`}
+              custom={i}
+              variants={letterVariants}
+              style={{
+                display: 'inline-block',
+                willChange: 'filter, opacity, transform',
+              }}
+            >
+              <Text as="span">{char}</Text>
+            </motion.span>
+          ))}
+        </motion.span>
+      </AnimatePresence>
+
+      {/* Gentle blinking cursor */}
       <Box
         as="span"
-        ml="2px"
+        ml="6px"
         w="2px"
-        h="1.2em"
+        h="1.1em"
         bg="currentColor"
+        borderRadius="full"
         display="inline-block"
         sx={{
-          '@keyframes blink': {
-            '0%, 100%': { opacity: 1 },
-            '50%': { opacity: 0 },
+          '@keyframes softBlink': {
+            '0%, 100%': { opacity: 0.85 },
+            '50%': { opacity: 0.15 },
           },
-          animation: 'blink 0.8s infinite',
+          animation: 'softBlink 1.4s ease-in-out infinite',
         }}
       />
     </Box>
@@ -88,3 +140,8 @@ const Typewriter = ({
 }
 
 export default memo(Typewriter)
+
+
+
+
+
